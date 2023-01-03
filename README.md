@@ -1,7 +1,7 @@
 <!--[![DOI]()]()-->
 # Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM routine on Ampere GPUs
 
-PACT 2022 paper entitled "Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM routine on Ampere GPUs"
+This repo accompanies the paper [Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM routine on Ampere GPUs](https://gac.udc.es/~basilio/papers/Castro22-MLSparse.pdf), published at PACT'22. It includes the kernels associated with CLASP, which has been presented in that conference. CLASP is a column-vector pruning-aware implementation of the SpMM routine that supports the characteristics of the Ampere platform. It aims to take advantage of the knowledge pushed into the pruning technique to generate the sparse input matrices (e.g. column-vector), and boost the performance achieved on half precision.
 
 ## Build
 
@@ -40,8 +40,15 @@ sudo nvidia-smi -lgc 1750 -i 0
 ## Citation
 
 ```
-Roberto L. Castro, Diego Andrade, and Basilio B. Fraguela. 2022. Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM routine on Ampere GPUs. In PACT ’22: International Conference on Parallel Architectures and Compilation Techniques (PACT), October 10–12, 2022, Chicago, IL.
+@inproceedings{castro2022probing,
+  author    = {Castro, Roberto L. and Andrade, Diego and Fraguela, Basilio B.},
+  title     = {Probing the Efficacy of Hardware-Aware Weight Pruning to Optimize the SpMM routine on Ampere GPUs},
+  booktitle = {Proceedings of the International Conference on Parallel Architectures and Compilation Techniques, {PACT} 22},
+  year      = {2022},
+}
 ```
+
+
 ## License
 Apache-2.0 License
 
